@@ -1,0 +1,17 @@
+<h1>The Spoon</h1>
+
+<form action="/restaurants" method="get">
+  <!-- NAME IS THE KEY IN THE PARAMS -->
+  <input type="text" name="category" placeholder="What kind of food?">
+  <input type="submit">
+</form>
+
+
+<p>Create New Restaurant</p>
+<form action="/restaurants" method="post">
+  <%= hidden_field_tag :authenticity_token, form_authenticity_token %>
+  <input type="text" name="name" placeholder="Name">
+  <input type="text" name="address" placeholder="Address">
+  <input type="submit">
+</form>
+

@@ -1,0 +1,8 @@
+<h1>Restaurants</h1>
+
+<ul>
+  <% @restaurants.each do |id, restaurant| %>
+    <!-- restaurant is a hash -->
+    <li> <%= link_to restaurant[:name], restaurant_path(id) %> | <%= restaurant[:address] %> | <%= restaurant[:category] %> </li>
+  <% end %>
+</ul>
